@@ -13,6 +13,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -443,7 +444,16 @@ public class AllThreadsPatterns {
 							}
 					}
 							
-							Collections.sort(words, new CompareString()); // sorting all the identified words in dictionary order.
+							Collections.sort(words, new Comparator(){
+
+								@Override
+								public int compare(Object o1, Object o2) {
+									String s1 = (String)o1;
+									String s2 = (String)o2;
+									return s1.compareTo(s2);
+								}
+								
+							}); // sorting all the identified words in dictionary order.
 							
 							Iterator<String> it=words.iterator();
 							

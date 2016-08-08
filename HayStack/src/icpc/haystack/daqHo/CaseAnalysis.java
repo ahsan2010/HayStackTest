@@ -30,10 +30,10 @@ public class CaseAnalysis{
 		Set tempset1=map1.entrySet();
 		Iterator itor=tempset.iterator();
 		Iterator itor1=tempset1.iterator();
-		ResultStore sorter;
+		//ResultStore sorter;
 		Vector temper=new Vector();
-		CompareSupport cs1=new CompareSupport();
-		while(itor.hasNext()) // get the identified features and its occurrence frequency.
+		//CompareSupport cs1=new CompareSupport();
+		/*while(itor.hasNext()) // get the identified features and its occurrence frequency.
 		{
 			Map.Entry mapentry1 = (Map.Entry) itor.next();  
 
@@ -51,7 +51,7 @@ public class CaseAnalysis{
 				sorter=(ResultStore)temper.elementAt(t);
 				System.out.println(sorter.getCandiFeature()+"--->"+(int)sorter.getSupport());
 			}
-		 
+		 */
 		 
 		 
 		try
@@ -177,10 +177,10 @@ public class CaseAnalysis{
 			Vector NounList=new Vector();
 			String nounlist=null;
 
-			ResultStore rs;
-			ResultStore rsp;
+		//	ResultStore rs;
+		//	ResultStore rsp;
 			Vector tempStore=new Vector();
-			CompareSupport cs=new CompareSupport();
+		//	CompareSupport cs=new CompareSupport();
 
 			if(!conn.isClosed())
 				{
